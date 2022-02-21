@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:garuda_ott/presentation/auth/login/login_page.dart';
+import 'package:garuda_ott/presentation/auth/login/widgets/login_background.dart';
 import 'package:garuda_ott/utils/utils.dart';
 
 void main() {
@@ -24,8 +25,18 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: LoginPage(),
+    return Stack(
+      alignment: Alignment.center,
+      children: const [
+        LoginBackground(),
+        Scaffold(
+          extendBodyBehindAppBar: true,
+          backgroundColor: Colors.transparent,
+          body: Center(
+            child: LoginPage(),
+          ),
+        )
+      ],
     );
   }
 }
