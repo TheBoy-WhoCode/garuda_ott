@@ -4,11 +4,12 @@ class MyColors {
   // Colors
   static const Color primaryButtonColor = Color(0xFFE81913);
   static const Color primaryFontColor = Colors.white;
-  static const Color scaffoldColor = Color(0xFF03040A);
+  static const Color scaffoldColor = Color(0xFF0A0B0F);
   static const Color pannelColor = Colors.black;
   static const Color secondryButtonColor = Color(0xFF270202);
   static const Color buttonBorderColor = Color(0xFF710000);
   static const Color inputBorderColor = Color(0xFF727272);
+  static const Color appBarColor = Color(0xFF0A0B0f);
 
   // Material Colors
   static const Map<int, Color> whiteShade = {

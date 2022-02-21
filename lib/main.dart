@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:garuda_ott/presentation/auth/login/login_page.dart';
 import 'package:garuda_ott/presentation/auth/login/widgets/login_background.dart';
+import 'package:garuda_ott/presentation/presentation.dart';
 import 'package:garuda_ott/utils/utils.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Garuda Cinema',
       theme: CustomTheme.customTheme,
-      home: const MyHomePage(),
+      home: const RegisterPage(),
     );
   }
 }

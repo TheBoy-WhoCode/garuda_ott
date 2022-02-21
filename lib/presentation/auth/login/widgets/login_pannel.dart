@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:garuda_ott/utils/utils.dart';
-
-import 'custom_text_form_field.dart';
+import 'package:garuda_ott/widgets/widgets.dart';
 
 class LoginPannel extends StatelessWidget {
   const LoginPannel({
