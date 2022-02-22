@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Garuda Cinema',
       theme: CustomTheme.customTheme,
-      home: const RegisterPage(),
+      home: const MyHomePage(),
     );
   }
 }
@@ -34,7 +34,7 @@ class MyHomePage extends StatelessWidget {
           extendBodyBehindAppBar: true,
           backgroundColor: Colors.transparent,
           body: Center(
-            child: LoginPage(),
+            child: RegisterPage(),
           ),
         )
       ],

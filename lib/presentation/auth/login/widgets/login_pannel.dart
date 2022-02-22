@@ -9,10 +9,10 @@ class LoginPannel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData themeData = Theme.of(context);
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 26, horizontal: 26),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const CustomTextFormField(
             prefix: Text("+91 "),
@@ -45,6 +45,16 @@ class LoginPannel extends StatelessWidget {
                 child: const Text("Sign Up"),
               )
             ],
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text(
+              "Sign In",
+              style: themeData.textTheme.headline4,
+            ),
           )
         ],
       ),
