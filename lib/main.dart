@@ -34,7 +34,7 @@ class MyHomePage extends StatelessWidget {
           extendBodyBehindAppBar: true,
           backgroundColor: Colors.transparent,
           body: Center(
-            child: OTPPage(),
+            child: ForgotPassword(),
           ),
         )
       ],

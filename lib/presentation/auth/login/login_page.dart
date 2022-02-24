@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:garuda_ott/utils/assets/assets.dart';
-import 'package:garuda_ott/utils/themes/themes.dart';
+import 'package:garuda_ott/widgets/custom_pannel.dart';
 import 'widgets/login_pannel.dart';
 
 class LoginPage extends StatelessWidget {
@@ -8,8 +8,6 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double width = MediaQuery.of(context).size.width;
-    final double height = MediaQuery.of(context).size.height;
     return SingleChildScrollView(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -21,15 +19,20 @@ class LoginPage extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          Container(
-            height: height * 0.6,
-            width: width * 0.89,
-            decoration: BoxDecoration(
-              color: MyColors.pannelColor.withOpacity(0.7),
-              borderRadius: BorderRadius.circular(20.0),
-            ),
-            child: const LoginPannel(),
+          const CustomPannel(
+            heightPercentage: 0.6,
+            widthPercentage: 0.89,
+            child: LoginPannel(),
           ),
+          // Container(
+          //   height: height * 0.6,
+          //   width: width * 0.89,
+          //   decoration: BoxDecoration(
+          //     color: MyColors.pannelColor.withOpacity(0.7),
+          //     borderRadius: BorderRadius.circular(20.0),
+          //   ),
+          //   child:
+          // ),
         ],
       ),
     );

@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:garuda_ott/widgets/custom_app_bar.dart';
 import 'package:garuda_ott/widgets/widgets.dart';
 
-import 'widgets/register_widget.dart';
+import 'widgets/forgot_password_widget.dart';
 
-class RegisterPage extends StatelessWidget {
-  const RegisterPage({Key? key}) : super(key: key);
+class ForgotPassword extends StatelessWidget {
+  const ForgotPassword({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final ThemeData themeData = Theme.of(context);
-
     return CustomAppBar(
-      title: "Sign Up",
+      title: "Forgot Password",
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
@@ -20,8 +18,8 @@ class RegisterPage extends StatelessWidget {
             heightPercentage: 0.75,
             widthPercentage: 0.9,
             child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
-              child: RegisterWidget(themeData: themeData),
+              padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 20),
+              child: ForgotPasswordWidget(themeData: themeData),
             ),
           ),
         ),
