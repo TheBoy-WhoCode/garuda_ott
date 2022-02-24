@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:garuda_ott/utils/themes/themes.dart';
+import 'package:garuda_ott/widgets/widgets.dart';
 
 class OTPPage extends StatelessWidget {
   const OTPPage({Key? key}) : super(key: key);
@@ -19,6 +20,20 @@ class OTPPage extends StatelessWidget {
           title: Text(
             "Verification",
             style: themeData.textTheme.headline2,
+          ),
+        ),
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+            child: CustomPannel(
+              heightPercentage: 0.75,
+              widthPercentage: 0.9,
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+                // child: ,
+              ),
+            ),
           ),
         ),
       ),
