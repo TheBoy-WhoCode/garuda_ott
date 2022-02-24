@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:garuda_ott/presentation/auth/OTP/widgets/sms_otp.dart';
+import 'package:garuda_ott/utils/assets/assets.dart';
 import 'package:garuda_ott/utils/themes/themes.dart';
 import 'package:garuda_ott/widgets/widgets.dart';
 
@@ -22,16 +24,15 @@ class OTPPage extends StatelessWidget {
             style: themeData.textTheme.headline2,
           ),
         ),
-        body: SingleChildScrollView(
+        body: const SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+            padding: EdgeInsets.symmetric(vertical: 40, horizontal: 20),
             child: CustomPannel(
               heightPercentage: 0.75,
               widthPercentage: 0.9,
               child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
-                // child: ,
+                padding: EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+                child: SMSOtp(),
               ),
             ),
           ),
