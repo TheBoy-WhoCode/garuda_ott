@@ -58,12 +58,6 @@ class CustomTheme {
           borderSide: BorderSide(color: MyColors.inputBorderColor),
         ),
       ),
-      // buttonTheme: ButtonThemeData(
-      //   buttonColor: MyColors.primaryButtonColor,
-      //   shape: RoundedRectangleBorder(
-      //     borderRadius: BorderRadius.circular(20),
-      //   ),
-      // ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           primary: MyColors.primaryButtonColor,

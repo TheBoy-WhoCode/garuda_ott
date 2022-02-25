@@ -11,7 +11,7 @@ class LoginBackground extends StatelessWidget {
   Widget build(BuildContext context) {
     return ShaderMask(
       shaderCallback: (bounds) =>
-          MyColors.transparentOverlay.createShader(bounds),
+          MyColors.transparentOverlayTopBottom.createShader(bounds),
       blendMode: BlendMode.darken,
       child: Container(
         decoration: const BoxDecoration(

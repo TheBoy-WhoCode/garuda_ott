@@ -11,7 +11,7 @@ class MyColors {
   static const Color inputBorderColor = Color(0xFF727272);
   static const Color appBarColor = Color(0xFF0A0B0f);
   static const Color textButtonColor = Color(0xFFE81913);
-
+  static const Color scaffoldBottom = Color(0xFF071021);
 
   // Material Colors
   static const Map<int, Color> whiteShade = {
@@ -37,9 +37,15 @@ class MyColors {
     colors: [Color(0xFF0A0B0F), Color(0xFF05132D)],
   );
 
-  static const LinearGradient transparentOverlay = LinearGradient(
+  static const LinearGradient transparentOverlayTopBottom = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
     colors: [Colors.black, Colors.transparent],
+  );
+
+  static const LinearGradient transparentOverlayBottomTop = LinearGradient(
+    begin: Alignment.bottomCenter,
+    end: Alignment.topCenter,
+    colors: [scaffoldBottom, Colors.transparent],
   );
 }
