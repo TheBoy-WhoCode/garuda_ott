@@ -24,7 +24,7 @@ class SearchAppBar extends StatelessWidget {
           hintStyle:
               GoogleFonts.openSans(fontSize: 16, color: MyColors.appBarColor),
           prefixIcon: const Icon(
-            Icons.arrow_back,
+            Icons.search,
             size: 28,
             color: MyColors.appBarColor,
           ),

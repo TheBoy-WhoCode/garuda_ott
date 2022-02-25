@@ -43,6 +43,12 @@ class MyColors {
     colors: [Colors.black, Colors.transparent],
   );
 
+  static LinearGradient transparentOverlayBlackBottomTop = LinearGradient(
+    begin: Alignment.bottomCenter,
+    end: Alignment.topCenter,
+    colors: [scaffoldBottom.withOpacity(0.9), Colors.transparent],
+  );
+
   static const LinearGradient transparentOverlayBottomTop = LinearGradient(
     begin: Alignment.bottomCenter,
     end: Alignment.topCenter,

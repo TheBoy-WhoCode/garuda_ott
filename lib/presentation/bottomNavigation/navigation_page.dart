@@ -16,7 +16,7 @@ class _NavigationPageState extends State<NavigationPage> {
     HomePage(
       key: const PageStorageKey("homePage"),
     ),
-    const SearchPage(
+    SearchPage(
       key: PageStorageKey("searchPage"),
     ),
     const Scaffold(),
