@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:garuda_ott/presentation/presentation.dart';
+import 'package:garuda_ott/presentation/search/search_page.dart';
 import 'package:garuda_ott/utils/themes/colors.dart';
 
 class NavigationPage extends StatefulWidget {
@@ -15,7 +16,9 @@ class _NavigationPageState extends State<NavigationPage> {
     HomePage(
       key: const PageStorageKey("homePage"),
     ),
-    const Scaffold(),
+    const SearchPage(
+      key: PageStorageKey("searchPage"),
+    ),
     const Scaffold(),
     const Scaffold(),
     const Scaffold(),
@@ -29,7 +32,7 @@ class _NavigationPageState extends State<NavigationPage> {
     "More": Icons.menu
   };
 
-  int _currentIndex = 0;
+  int _currentIndex = 1;
 
   @override
   Widget build(BuildContext context) {
