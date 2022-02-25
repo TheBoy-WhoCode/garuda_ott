@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:garuda_ott/controllers/homeControllers/app_scroll_controller.dart';
+import 'package:garuda_ott/controllers/controllers.dart';
 import 'package:garuda_ott/data/testData/data.dart';
-import 'package:garuda_ott/presentation/home/widgets/content_header.dart';
-import 'package:garuda_ott/presentation/home/widgets/home_app_bar.dart';
 import 'package:get/get.dart';
-
+import 'widgets/content_header.dart';
+import 'widgets/home_app_bar.dart';
 import 'widgets/content_list.dart';
 import 'widgets/previews.dart';
 

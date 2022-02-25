@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:garuda_ott/presentation/auth/login/login_page.dart';
 import 'package:garuda_ott/presentation/auth/login/widgets/login_background.dart';
 import 'package:garuda_ott/presentation/presentation.dart';
 import 'package:garuda_ott/utils/utils.dart';
