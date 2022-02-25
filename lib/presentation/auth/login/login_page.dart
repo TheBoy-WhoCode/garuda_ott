@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:garuda_ott/utils/assets/assets.dart';
-import 'package:garuda_ott/widgets/custom_pannel.dart';
+import 'package:garuda_ott/utils/utils.dart';
+import 'package:garuda_ott/widgets/widgets.dart';
 import 'widgets/login_pannel.dart';
 
 class LoginPage extends StatelessWidget {

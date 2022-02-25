@@ -1,7 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:garuda_ott/presentation/presentation.dart';
-import 'package:garuda_ott/presentation/search/search_page.dart';
 import 'package:garuda_ott/utils/themes/colors.dart';
 
 class NavigationPage extends StatefulWidget {
@@ -17,7 +16,7 @@ class _NavigationPageState extends State<NavigationPage> {
       key: const PageStorageKey("homePage"),
     ),
     SearchPage(
-      key: PageStorageKey("searchPage"),
+      key: const PageStorageKey("searchPage"),
     ),
     const Scaffold(),
     const Scaffold(),

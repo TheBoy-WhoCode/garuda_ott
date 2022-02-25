@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:garuda_ott/model/content_model.dart';
-import 'package:garuda_ott/utils/logs/logger.dart';
+import 'package:garuda_ott/model/models.dart';
+import 'package:garuda_ott/utils/utils.dart';
 
 class Previews extends StatelessWidget {
   final String title;

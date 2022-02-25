@@ -1,8 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:garuda_ott/utils/assets/assets.dart';
-import 'package:garuda_ott/utils/logs/logger.dart';
-import 'package:garuda_ott/utils/themes/themes.dart';
+import 'package:garuda_ott/utils/utils.dart';
 import 'vertical_icon_button.dart';
 
 class ContentHeader extends StatelessWidget {

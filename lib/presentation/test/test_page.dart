@@ -7,21 +7,19 @@ class TestingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Carousel in vertical scrollable'),
+        title: const Text('Carousel in vertical scrollable'),
       ),
       body: ListView.builder(
-        padding: EdgeInsets.symmetric(vertical: 16.0),
+        padding: const EdgeInsets.symmetric(vertical: 16.0),
         itemBuilder: (BuildContext context, int index) {
           if (index % 2 == 0) {
             return _buildCarousel(context, index ~/ 2);
           } else {
-            return Divider();
+            return const Divider();
           }
         },
       ),
     );
-    
-    
   }
 
   Widget _buildCarousel(BuildContext context, int carouselIndex) {
@@ -43,6 +41,7 @@ class TestingPage extends StatelessWidget {
       ],
     );
   }
+
   Widget _buildCarouselItem(
       BuildContext context, int carouselIndex, int itemIndex) {
     return Padding(

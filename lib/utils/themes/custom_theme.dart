@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:garuda_ott/utils/themes/themes.dart';
+import 'package:garuda_ott/utils/utils.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomTheme {

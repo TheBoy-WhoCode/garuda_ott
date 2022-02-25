@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:garuda_ott/utils/themes/themes.dart';
+import 'package:garuda_ott/utils/utils.dart';
 
 class CustomPannel extends StatelessWidget {
   final double heightPercentage;

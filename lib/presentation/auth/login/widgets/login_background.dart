@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:garuda_ott/utils/assets/assets.dart';
-import 'package:garuda_ott/utils/themes/colors.dart';
+import 'package:garuda_ott/utils/utils.dart';
 
 class LoginBackground extends StatelessWidget {
   const LoginBackground({
@@ -18,7 +17,6 @@ class LoginBackground extends StatelessWidget {
           image: DecorationImage(
             image: AssetImage(Assets.loginBackground),
             fit: BoxFit.cover,
-            // colorFilter: ColorFilter.mode(Colors.black45, BlendMode.darken),
           ),
         ),
       ),

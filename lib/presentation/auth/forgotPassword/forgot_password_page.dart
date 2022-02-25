@@ -3,8 +3,8 @@ import 'package:garuda_ott/widgets/widgets.dart';
 
 import 'widgets/forgot_password_widget.dart';
 
-class ForgotPassword extends StatelessWidget {
-  const ForgotPassword({Key? key}) : super(key: key);
+class ForgotPasswordPage extends StatelessWidget {
+  const ForgotPasswordPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

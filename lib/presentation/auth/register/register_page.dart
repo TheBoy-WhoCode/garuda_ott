@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:garuda_ott/widgets/custom_app_bar.dart';
 import 'package:garuda_ott/widgets/widgets.dart';
-
 import 'widgets/register_widget.dart';
 
 class RegisterPage extends StatelessWidget {

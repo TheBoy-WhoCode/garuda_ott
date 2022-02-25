@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:garuda_ott/presentation/auth/OTP/widgets/sms_otp.dart';
-import 'package:garuda_ott/widgets/custom_app_bar.dart';
 import 'package:garuda_ott/widgets/widgets.dart';
+import 'widgets/sms_otp.dart';
 
 class OTPPage extends StatelessWidget {
   const OTPPage({Key? key}) : super(key: key);
