@@ -11,23 +11,20 @@ class SearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeData themeData = Theme.of(context);
-    return Container(
-      decoration: const BoxDecoration(gradient: MyColors.scaffoldGradient),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: CustomScrollView(
-          controller: _scrollController,
-          slivers: [
-            const SliverAppBar(
-              floating: true,
-              title: SearchAppBar(),
-            ),
-            SliverToBoxAdapter(
-              child: SearchDetail(
-                  scrollController: _scrollController, themeData: themeData),
-            ),
-          ],
-        ),
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: CustomScrollView(
+        controller: _scrollController,
+        slivers: [
+          const SliverAppBar(
+            floating: true,
+            title: SearchAppBar(),
+          ),
+          SliverToBoxAdapter(
+            child: SearchDetail(
+                scrollController: _scrollController, themeData: themeData),
+          ),
+        ],
       ),
     );
   }
