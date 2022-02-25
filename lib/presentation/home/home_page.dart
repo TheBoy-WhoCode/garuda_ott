@@ -3,17 +3,16 @@ import 'package:garuda_ott/controllers/homeControllers/app_scroll_controller.dar
 import 'package:garuda_ott/data/testData/data.dart';
 import 'package:garuda_ott/presentation/home/widgets/content_header.dart';
 import 'package:garuda_ott/presentation/home/widgets/home_app_bar.dart';
-import 'package:garuda_ott/utils/logs/logger.dart';
 import 'package:get/get.dart';
 
 import 'widgets/content_list.dart';
 import 'widgets/previews.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({Key? key}) : super(key: key);
-
-  final HomeAppBarController homeAppBarController =
+  final HomeAppBarController _homeAppBarController =
       Get.put<HomeAppBarController>(HomeAppBarController());
+
+  HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,46 +22,66 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.transparent,
       appBar: PreferredSize(
         preferredSize: Size(width, 50),
-        child: Obx(() {
-          logger.d(
-              "[HomeAppBarController] ${homeAppBarController.offset.value} ");
-          return HomeAppBar(
-            scrollOffset: homeAppBarController.offset.value,
-          );
-        }),
-      ),
-      body: CustomScrollView(
-        controller: homeAppBarController.scrollController.value,
-        slivers: const [
-          SliverToBoxAdapter(
-            child: ContentHeader(),
+        child: Obx(
+          () => HomeAppBar(
+            scrollOffset: _homeAppBarController.offset.value,
           ),
-          SliverPadding(
-            padding: EdgeInsets.only(top: 20),
-            sliver: SliverToBoxAdapter(
-              child: Previews(
-                key: PageStorageKey("previews"),
-                title: "Previews",
-                contentList: previews,
+        ),
+      ),
+      body: Obx(
+        () => CustomScrollView(
+          controller: _homeAppBarController.scrollController.value,
+          slivers: const [
+            SliverToBoxAdapter(
+              child: ContentHeader(),
+            ),
+            SliverPadding(
+              padding: EdgeInsets.only(top: 20),
+              sliver: SliverToBoxAdapter(
+                child: Previews(
+                  key: PageStorageKey("previews"),
+                  title: "Previews",
+                  contentList: previews,
+                ),
               ),
             ),
-          ),
-          SliverToBoxAdapter(
-            child: ContentList(
-              key: PageStorageKey("mylist"),
-              title: "My List",
-              contentList: myList,
+            SliverToBoxAdapter(
+              child: ContentList(
+                key: PageStorageKey("mylist"),
+                title: "My List",
+                contentList: myList,
+              ),
             ),
-          ),
-          SliverToBoxAdapter(
-            child: ContentList(
-              key: PageStorageKey("orginals"),
-              title: "Netflix Orginals",
-              contentList: originals,
-              isOriginals: true,
+            SliverToBoxAdapter(
+              child: ContentList(
+                key: PageStorageKey("orginals"),
+                title: "Recently Added",
+                contentList: originals,
+              ),
             ),
-          ),
-        ],
+            SliverToBoxAdapter(
+              child: ContentList(
+                key: PageStorageKey("mylist"),
+                title: "Movies",
+                contentList: myList,
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: ContentList(
+                key: PageStorageKey("orginals"),
+                title: "Series",
+                contentList: originals,
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: ContentList(
+                key: PageStorageKey("orginals"),
+                title: "Short Films",
+                contentList: originals,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

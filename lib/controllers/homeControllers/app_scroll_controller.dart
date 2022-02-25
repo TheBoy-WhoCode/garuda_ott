@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:garuda_ott/utils/logs/logger.dart';
 import 'package:get/get.dart';
 
 class HomeAppBarController extends GetxController {
@@ -11,12 +10,16 @@ class HomeAppBarController extends GetxController {
     scrollController.value.addListener(() {
       setOffset(scrollController.value.offset);
     });
-
     super.onInit();
   }
 
+  @override
+  void onClose() {
+    scrollController.value.dispose();
+    super.onClose();
+  }
+
   void setOffset(double value) {
-    offset = value.obs;
-    // logger.d("[Offset] $offset");
+    offset.value = value;
   }
 }

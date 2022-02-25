@@ -46,7 +46,7 @@ class _NavigationPageState extends State<NavigationPage> {
                 child: Opacity(
                   opacity: 0.3,
                   child: BottomNavigationBar(
-                    backgroundColor: Colors.black.withOpacity(0.3),
+                    backgroundColor: Colors.grey.withOpacity(0.1),
                     type: BottomNavigationBarType.fixed,
                     items: _icons
                         .map(
