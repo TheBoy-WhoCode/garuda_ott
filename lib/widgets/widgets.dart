@@ -4,3 +4,4 @@ export 'profile_avatar.dart';
 export 'custom_app_bar.dart';
 export 'read_more_text.dart';
 export 'content_list.dart';
+export 'video_content.dart';
