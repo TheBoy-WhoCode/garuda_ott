@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:garuda_ott/data/testData/data.dart';
 import 'package:garuda_ott/widgets/widgets.dart';
+import 'season_detail.dart';
 import 'widgets/movie_detail.dart';
 import 'widgets/movie_info.dart';
 import 'widgets/movie_player.dart';
@@ -20,6 +21,7 @@ class PlayerPage extends StatelessWidget {
               MoviePlayer(),
               MovieInfo(),
               MovieDetail(),
+              SeasonDetail(),
               ContentList(
                 key: PageStorageKey("mylist"),
                 title: "More like this",
