@@ -37,11 +37,11 @@ class CustomTheme {
           color: MyColors.primaryFontColor,
         ),
         subtitle1: GoogleFonts.openSans(
-          fontSize: 18,
+          fontSize: 14,
           color: MyColors.primaryFontColor,
         ),
         subtitle2: GoogleFonts.openSans(
-          fontSize: 18,
+          fontSize: 12,
           color: MyColors.primaryFontColor,
         ),
       ),

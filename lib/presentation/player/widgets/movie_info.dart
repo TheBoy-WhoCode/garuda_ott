@@ -13,35 +13,77 @@ class MovieInfo extends StatelessWidget {
       height: 150,
       padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            height: 100,
-            width: 80,
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage(Assets.atla), fit: BoxFit.cover),
-            ),
-          ),
-          const SizedBox(width: 10),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text(
-                "Atla",
-                style: themeData.textTheme.headline3,
+              Container(
+                height: 100,
+                width: 80,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage(Assets.atla), fit: BoxFit.cover),
+                ),
               ),
-              Text(
-                "English . Fantasy/Adventure",
-                style: themeData.textTheme.headline6,
+              const SizedBox(width: 10),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    "Atla",
+                    style: themeData.textTheme.headline3,
+                  ),
+                  Text(
+                    "English . Fantasy/Adventure",
+                    style: themeData.textTheme.subtitle1,
+                  ),
+                  Text(
+                    "2010",
+                    style: themeData.textTheme.subtitle1,
+                  )
+                ],
               ),
-              Text(
-                "2010",
-                style: themeData.textTheme.headline6,
-              )
             ],
-          )
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              MaterialButton(
+                onPressed: () {},
+                shape: const CircleBorder(
+                  side: BorderSide(
+                    color: Colors.white,
+                    width: 2,
+                  ),
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.all(12.0),
+                  child: Icon(
+                    Icons.download,
+                    size: 24,
+                  ),
+                ),
+              ),
+              MaterialButton(
+                onPressed: () {},
+                shape: const CircleBorder(
+                  side: BorderSide(
+                    color: Colors.white,
+                    width: 2,
+                  ),
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.all(12.0),
+                  child: Icon(
+                    Icons.add,
+                    size: 24,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
