@@ -14,22 +14,19 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeData themeData = Theme.of(context);
-    return Container(
-      decoration: const BoxDecoration(gradient: MyColors.scaffoldGradient),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        appBar: AppBar(
-          leading: const Icon(
-            Icons.arrow_back,
-            size: 30,
-          ),
-          title: Text(
-            title,
-            style: themeData.textTheme.headline1,
-          ),
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      appBar: AppBar(
+        leading: const Icon(
+          Icons.arrow_back,
+          size: 30,
         ),
-        body: body,
+        title: Text(
+          title,
+          style: themeData.textTheme.headline1,
+        ),
       ),
+      body: body,
     );
   }
 }

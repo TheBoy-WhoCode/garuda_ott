@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:garuda_ott/data/testData/data.dart';
 import 'package:garuda_ott/widgets/widgets.dart';
-import 'season_detail.dart';
+import 'widgets/season_detail.dart';
 import 'widgets/movie_detail.dart';
 import 'widgets/movie_info.dart';
 import 'widgets/movie_player.dart';
@@ -11,7 +11,6 @@ class PlayerPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final ThemeData themeData = Theme.of(context);
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: SafeArea(

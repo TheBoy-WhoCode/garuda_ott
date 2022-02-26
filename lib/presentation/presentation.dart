@@ -7,3 +7,4 @@ export './home/home_page.dart';
 export './test/test_page.dart';
 export './search/search_page.dart';
 export './player/player_page.dart';
+export './downloads/downloads_page.dart';
