@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:garuda_ott/utils/utils.dart';
 
+import 'circular_button.dart';
+
 class MovieInfo extends StatelessWidget {
   const MovieInfo({
     Key? key,
@@ -49,39 +51,11 @@ class MovieInfo extends StatelessWidget {
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              MaterialButton(
-                onPressed: () {},
-                shape: const CircleBorder(
-                  side: BorderSide(
-                    color: Colors.white,
-                    width: 2,
-                  ),
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.all(12.0),
-                  child: Icon(
-                    Icons.download,
-                    size: 24,
-                  ),
-                ),
+            children: const [
+              CircularButton(
+                icons: Icons.download,
               ),
-              MaterialButton(
-                onPressed: () {},
-                shape: const CircleBorder(
-                  side: BorderSide(
-                    color: Colors.white,
-                    width: 2,
-                  ),
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.all(12.0),
-                  child: Icon(
-                    Icons.add,
-                    size: 24,
-                  ),
-                ),
-              ),
+              CircularButton(icons: Icons.add)
             ],
           ),
         ],
