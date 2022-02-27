@@ -10,3 +10,4 @@ export './player/player_page.dart';
 export './downloads/downloads_page.dart';
 export './watchlist/watchlist_page.dart';
 export 'profile/profile_page.dart';
+export './splashScreen/splash_screen_page.dart';

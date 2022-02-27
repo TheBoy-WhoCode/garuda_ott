@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Garuda Cinema',
       theme: CustomTheme.customTheme,
-      home: const NavigationPage(),
+      home: const SplashScreenPage(),
       initialRoute: "/",
       getPages: [
         GetPage(name: "/", page: () => HomePage(), binding: HomeBindigs()),
