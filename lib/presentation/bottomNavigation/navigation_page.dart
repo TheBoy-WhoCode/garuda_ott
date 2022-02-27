@@ -1,7 +1,9 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:garuda_ott/controllers/controllers.dart';
 import 'package:garuda_ott/presentation/presentation.dart';
 import 'package:garuda_ott/utils/themes/colors.dart';
+import 'package:get/get.dart';
 
 class NavigationPage extends StatefulWidget {
   const NavigationPage({Key? key}) : super(key: key);
@@ -18,7 +20,7 @@ class _NavigationPageState extends State<NavigationPage> {
     SearchPage(
       key: const PageStorageKey("searchPage"),
     ),
-    const Watchlist(
+    const WatchlistPage(
       key: PageStorageKey("watchlist"),
     ),
     const DownloadPage(
@@ -37,55 +39,55 @@ class _NavigationPageState extends State<NavigationPage> {
     "More": Icons.menu
   };
 
-  int _currentIndex = 4;
+  final NavigationController navigationController =
+      Get.put<NavigationController>(NavigationController());
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(gradient: MyColors.scaffoldGradient),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: _screens[_currentIndex],
-        bottomNavigationBar: Stack(
-          children: [
-            ClipRRect(
-              child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 60, sigmaY: 60),
-                child: Opacity(
-                  opacity: 0.3,
-                  child: BottomNavigationBar(
-                    backgroundColor: Colors.grey.withOpacity(0.1),
-                    type: BottomNavigationBarType.shifting,
-                    items: _icons
-                        .map(
-                          (title, icon) => MapEntry(
-                            title,
-                            BottomNavigationBarItem(
-                              icon: Icon(
-                                icon,
-                                size: 30,
+      child: Obx(
+        () => Scaffold(
+          backgroundColor: Colors.transparent,
+          body: _screens[navigationController.currentIndex.value],
+          bottomNavigationBar: Stack(
+            children: [
+              ClipRRect(
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 60, sigmaY: 60),
+                  child: Opacity(
+                    opacity: 0.3,
+                    child: BottomNavigationBar(
+                      backgroundColor: Colors.grey.withOpacity(0.1),
+                      type: BottomNavigationBarType.shifting,
+                      items: _icons
+                          .map(
+                            (title, icon) => MapEntry(
+                              title,
+                              BottomNavigationBarItem(
+                                icon: Icon(
+                                  icon,
+                                  size: 30,
+                                ),
+                                label: title,
                               ),
-                              label: title,
                             ),
-                          ),
-                        )
-                        .values
-                        .toList(),
-                    currentIndex: _currentIndex,
-                    selectedItemColor: Colors.white,
-                    selectedFontSize: 11,
-                    unselectedItemColor: Colors.white,
-                    unselectedFontSize: 11,
-                    onTap: (index) => setState(
-                      () {
-                        _currentIndex = index;
-                      },
+                          )
+                          .values
+                          .toList(),
+                      currentIndex: navigationController.currentIndex.value,
+                      selectedItemColor: Colors.white,
+                      selectedFontSize: 11,
+                      unselectedItemColor: Colors.white,
+                      unselectedFontSize: 11,
+                      onTap: (index) =>
+                          navigationController.setCurrentIndex(index),
                     ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

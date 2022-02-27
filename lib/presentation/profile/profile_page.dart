@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import 'package:garuda_ott/widgets/widgets.dart';
-
 import 'widgets/profile_detail.dart';
 import 'widgets/profile_info.dart';
 

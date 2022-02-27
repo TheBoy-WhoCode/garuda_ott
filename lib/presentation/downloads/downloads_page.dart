@@ -9,6 +9,7 @@ class DownloadPage extends StatelessWidget {
     return const CustomAppBar(
       title: "Downloads",
       body: VideoContent(),
+      onBack: false,
     );
   }
 }
