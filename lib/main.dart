@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:garuda_ott/bindings/bindings.dart';
 import 'package:garuda_ott/presentation/presentation.dart';
+import 'package:garuda_ott/services/services.dart';
 import 'package:garuda_ott/utils/utils.dart';
 import 'package:get/get.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await setUp();
   runApp(const MyApp());
 }
 
@@ -29,7 +32,10 @@ class MyApp extends StatelessWidget {
             name: "/forgotPassword", page: () => const ForgotPasswordPage()),
         GetPage(name: "/otp", page: () => const OTPPage()),
         GetPage(name: "/register", page: () => const RegisterPage()),
-        GetPage(name: "/navigation", page: () => const NavigationPage(), binding: NavigationBinding())
+        GetPage(
+            name: "/navigation",
+            page: () => const NavigationPage(),
+            binding: NavigationBinding())
       ],
     );
   }
