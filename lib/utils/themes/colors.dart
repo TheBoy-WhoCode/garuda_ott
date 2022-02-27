@@ -12,6 +12,8 @@ class MyColors {
   static const Color appBarColor = Color(0xFF0A0B0f);
   static const Color textButtonColor = Color(0xFFE81913);
   static const Color scaffoldBottom = Color(0xFF071021);
+  static const Color crownColor = Color(0xFFDB9C32);
+  static Color cardColor = Colors.grey.withOpacity(0.09);
 
   // Material Colors
   static const Map<int, Color> whiteShade = {

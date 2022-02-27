@@ -24,7 +24,9 @@ class _NavigationPageState extends State<NavigationPage> {
     const DownloadPage(
       key: PageStorageKey("downloadPage"),
     ),
-    const Scaffold(),
+    const MorePage(
+      key: PageStorageKey("morePage"),
+    ),
   ];
 
   final Map<String, IconData> _icons = const {
@@ -35,7 +37,7 @@ class _NavigationPageState extends State<NavigationPage> {
     "More": Icons.menu
   };
 
-  int _currentIndex = 2;
+  int _currentIndex = 4;
 
   @override
   Widget build(BuildContext context) {
