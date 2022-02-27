@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:garuda_ott/utils/utils.dart';
+import 'package:get/get.dart';
 import 'vertical_icon_button.dart';
 
 class ContentHeader extends StatelessWidget {
@@ -18,7 +19,7 @@ class ContentHeader extends StatelessWidget {
               height: 500,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage(Assets.temp), fit: BoxFit.cover),
+                    image: AssetImage(Assets.atla), fit: BoxFit.cover),
               ),
             ),
             Container(
@@ -47,7 +48,7 @@ class ContentHeader extends StatelessWidget {
               left: 0,
               right: 0,
               bottom: 40,
-            )
+            ),
           ],
         );
       },
@@ -114,7 +115,7 @@ class _PlayButton extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(15, 5, 20, 5),
           primary: Colors.black,
           backgroundColor: Colors.white),
-      onPressed: () => logger.d("Play"),
+      onPressed: () => Get.toNamed("player"),
       icon: const Icon(
         Icons.play_arrow,
         size: 30,

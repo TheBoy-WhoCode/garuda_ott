@@ -6,10 +6,18 @@ class DownloadPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomAppBar(
-      title: "Downloads",
-      body: VideoContent(),
-      onBack: false,
+    final ThemeData themeData = Theme.of(context);
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      appBar: AppBar(
+        title: Center(
+          child: Text(
+            "Downloads",
+            style: themeData.textTheme.headline1,
+          ),
+        ),
+      ),
+      body: const VideoContent(),
     );
   }
 }

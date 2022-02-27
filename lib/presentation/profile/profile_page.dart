@@ -8,17 +8,22 @@ class MorePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomAppBar(
-      onBack: false,
-      title: "Profile",
-      body: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: Column(
-          children: const [
-            ProfileInfo(),
-            ProfileDetail(),
-          ],
+    final ThemeData themeData = Theme.of(context);
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      appBar: AppBar(
+        title: Center(
+          child: Text(
+            "Profile",
+            style: themeData.textTheme.headline1,
+          ),
         ),
+      ),
+      body: Column(
+        children: const [
+          ProfileInfo(),
+          ProfileDetail(),
+        ],
       ),
     );
   }

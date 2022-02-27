@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:garuda_ott/data/testData/data.dart';
+import 'package:garuda_ott/utils/utils.dart';
 import 'package:garuda_ott/widgets/widgets.dart';
 import 'widgets/season_detail.dart';
 import 'widgets/movie_detail.dart';
@@ -11,27 +12,32 @@ class PlayerPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: const [
-              MoviePlayer(),
-              MovieInfo(),
-              MovieDetail(),
-              SeasonDetail(),
-              ContentList(
-                key: PageStorageKey("mylist"),
-                title: "More like this",
-                contentList: myList,
-              ),
-              ContentList(
-                key: PageStorageKey("series"),
-                title: "Series like this",
-                contentList: myList,
-              ),
-            ],
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: MyColors.scaffoldGradient,
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: Column(
+              children: const [
+                MoviePlayer(),
+                MovieInfo(),
+                MovieDetail(),
+                SeasonDetail(),
+                ContentList(
+                  key: PageStorageKey("mylist"),
+                  title: "More like this",
+                  contentList: myList,
+                ),
+                ContentList(
+                  key: PageStorageKey("series"),
+                  title: "Series like this",
+                  contentList: myList,
+                ),
+              ],
+            ),
           ),
         ),
       ),

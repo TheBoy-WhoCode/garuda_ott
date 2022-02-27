@@ -34,16 +34,16 @@ class HomePage extends StatelessWidget {
             SliverToBoxAdapter(
               child: ContentHeader(),
             ),
-            SliverPadding(
-              padding: EdgeInsets.only(top: 20),
-              sliver: SliverToBoxAdapter(
-                child: Previews(
-                  key: PageStorageKey("previews"),
-                  title: "Previews",
-                  contentList: previews,
-                ),
-              ),
-            ),
+            // SliverPadding(
+            //   padding: EdgeInsets.only(top: 20),
+            //   sliver: SliverToBoxAdapter(
+            //     child: Previews(
+            //       key: PageStorageKey("previews"),
+            //       title: "Previews",
+            //       contentList: previews,
+            //     ),
+            //   ),
+            // ),
             SliverToBoxAdapter(
               child: ContentList(
                 key: PageStorageKey("mylist"),

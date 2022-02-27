@@ -12,9 +12,11 @@ class WatchlistPage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
-          title: Text(
-            "Watch List",
-            style: themeData.textTheme.headline1,
+          title: Center(
+            child: Text(
+              "Watch List",
+              style: themeData.textTheme.headline1,
+            ),
           ),
           bottom: const TabBar(
             tabs: [
