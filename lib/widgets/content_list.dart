@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:garuda_ott/model/models.dart';
-import 'package:garuda_ott/utils/utils.dart';
+import 'package:get/get.dart';
 
 class ContentList extends StatelessWidget {
   final String title;
@@ -39,7 +39,7 @@ class ContentList extends StatelessWidget {
               itemBuilder: (context, index) {
                 final Content content = contentList[index];
                 return GestureDetector(
-                  onTap: () => logger.d(content.name),
+                  onTap: () => Get.toNamed("player"),
                   child: Container(
                     margin: const EdgeInsets.symmetric(
                       horizontal: 8,
